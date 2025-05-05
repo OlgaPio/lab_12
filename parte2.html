@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 2 - Bucle while</title>
+</head>
+<body>
+    <h1>Ingresa números hasta ingresar un negativo</h1>
+    <button onclick="solicitarNumero()">Iniciar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function solicitarNumero() {
+            let numero = 0;
+            let numerosIngresados = [];
+
+            while (numero >= 0) {
+                numero = parseInt(prompt("Ingresa un número (negativo para salir):"));
+                if (numero >= 0) {
+                    numerosIngresados.push(numero);
+                }
+            }
+
+            document.getElementById("resultado").innerText = `Números ingresados: ${numerosIngresados.join(", ")}`;
+        }
+    </script>
+</body>
+</html>

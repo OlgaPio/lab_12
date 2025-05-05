@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 3 - Bucle do...while</title>
+</head>
+<body>
+    <h1>Verificación de Contraseña</h1>
+    <button onclick="verificarContraseña()">Iniciar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarContraseña() {
+            let contraseñaCorrecta = "TalentoTech2025";
+            let contraseñaIngresada;
+
+            do {
+                contraseñaIngresada = prompt("Ingresa la contraseña:");
+            } while (contraseñaIngresada !== contraseñaCorrecta);
+
+            document.getElementById("resultado").innerText = "¡Acceso permitido!";
+        }
+    </script>
+</body>
+</html>

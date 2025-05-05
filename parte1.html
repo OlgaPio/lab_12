@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 1 - Bucle for</title>
+</head>
+<body>
+    <h1>Suma y Promedio de Números</h1>
+    <label for="numeros">Ingresa números separados por comas:</label>
+    <input type="text" id="numeros">
+    <button onclick="calcularSumaPromedio()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularSumaPromedio() {
+            let numeros = document.getElementById("numeros").value.split(",").map(Number);
+            let suma = 0;
+
+            for (let i = 0; i < numeros.length; i++) {
+                suma += numeros[i];
+            }
+
+            let promedio = suma / numeros.length;
+            document.getElementById("resultado").innerText = `Suma total: ${suma}, Promedio: ${promedio.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
